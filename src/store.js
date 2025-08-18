@@ -4,6 +4,6 @@ import venueReducer from './venueSlice';
 
 export default configureStore({
   reducer: {
-    venue: venueReducer,
+    venue: venueReducer,   // state.venue is managed by venueReducer. all components in the application can access the state managed by the venueReducer()
   },
 });
