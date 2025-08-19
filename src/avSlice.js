@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const avSlice = createSlice({
   name: "av",
+  // state is an array with state = initialState
   initialState: [
     {
         img: "https://pixabay.com/images/download/business-20031_640.jpg",
@@ -41,7 +42,7 @@ export const avSlice = createSlice({
 
   reducers: {
     incrementAvQuantity: (state, action) => {
-        const item = state[action.payload];
+        const item = state[action.payload];              // action.payload is the idex, so state[action.payload] = state[index]
         if (item) {
             item.quantity++;
         }
